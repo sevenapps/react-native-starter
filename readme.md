@@ -11,10 +11,11 @@ If you are downloading this project for the first time, be sure to setup your [i
 
 This super simple example app expects you to have a root node in your database with a child of `names` which has a set of child nodes with random names for each value, like:
 
+```
 example-app -
   names -
     0 - joe
     1 - jane
     2 - john
     3 - ...
-
+```
