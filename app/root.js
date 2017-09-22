@@ -5,12 +5,16 @@ import LinearGradient from 'react-native-linear-gradient'
 import MapView from 'react-native-maps'
 import { connect } from 'react-redux'
 import { subscribe } from './redux/actions/names'
+import Button from 'react-native-button'
 
 class Root extends Component {
   componentDidMount() {
     setTimeout(() => {
       this.props.dispatch(subscribe())
     }, 1e3)
+  }
+  onPress() {
+    alert('ouch! stop stouching me')
   }
   render() {
     const { isLoaded, names } = this.props
@@ -25,7 +29,11 @@ class Root extends Component {
         }} style={{ width: 200, height: 100 }} />
         {!isLoaded && <Text style={styles.welcome}>... loading</Text>}
         {isLoaded && names.map((name, i) => <Text key={i} style={styles.welcome}>{name}</Text>)}
-        <LinearGradient colors={['orange', 'red']} style={{ width: 200, height: 50 }} />
+        <Button onPress={this.onPress.bind(this)}>
+          <LinearGradient colors={['orange', 'red']} style={{ width: 200, height: 50, justifyContent: 'center', alignItems: 'center' }}>
+            <Text style={{ color: 'white', backgroundColor: 'transparent' }}>Touch Me</Text>
+          </LinearGradient>
+        </Button>
       </View>
     )
   }
