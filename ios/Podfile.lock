@@ -65,6 +65,8 @@ PODS:
   - Protobuf (3.4.0)
   - React (0.48.3):
     - React/Core (= 0.48.3)
+  - react-native-maps (0.16.4):
+    - React
   - React/BatchedBridge (0.48.3):
     - React/Core
     - React/cxxreact_legacy
@@ -101,6 +103,7 @@ DEPENDENCIES:
   - Firebase/Database
   - Firebase/Messaging
   - Firebase/Storage
+  - react-native-maps (from `../node_modules/react-native-maps`)
   - React/BatchedBridge (from `../node_modules/react-native`)
   - React/Core (from `../node_modules/react-native`)
   - React/DevSupport (from `../node_modules/react-native`)
@@ -117,6 +120,8 @@ EXTERNAL SOURCES:
     :path: ../node_modules/react-native-linear-gradient
   React:
     :path: ../node_modules/react-native
+  react-native-maps:
+    :path: ../node_modules/react-native-maps
   RNFirebase:
     :path: ../node_modules/react-native-firebase
   RNVectorIcons:
@@ -140,10 +145,11 @@ SPEC CHECKSUMS:
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
   Protobuf: 03eef2ee0b674770735cf79d9c4d3659cf6908e8
   React: 748a63a3a08cef2864657ad752a5ca7393e07fc2
+  react-native-maps: b04d264bcd6d042a878c07ff2b759e1e79fb3108
   RNFirebase: 69d2379c0268426b3be8d7359773196930974cef
   RNVectorIcons: 208e7e1507e3bc800619caf1c2748ad6b6b68188
   Yoga: b3337798e426de90f48662cf0fe2ee1a844075e1
 
-PODFILE CHECKSUM: 49224956396f29870755c7755c4bbeffc29c13c7
+PODFILE CHECKSUM: 2e998437c5d08ca0bbd8b2a5cf43a474ab47f237
 
 COCOAPODS: 1.2.1

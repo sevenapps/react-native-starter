@@ -33,6 +33,7 @@ target 'firebaseExmpl' do
 
   pod 'BVLinearGradient', :path => '../node_modules/react-native-linear-gradient'  
   pod 'RNVectorIcons', :path => '../node_modules/react-native-vector-icons'
+  pod 'react-native-maps', path: '../node_modules/react-native-maps'
   
   target 'firebaseExmplTests' do
     inherit! :search_paths
@@ -52,4 +53,18 @@ target 'firebaseExmpl-tvOS' do
     # Pods for testing
   end
 
+end
+
+post_install do |installer|
+  installer.pods_project.targets.each do |target|
+    if target.name == 'react-native-google-maps'
+      target.build_configurations.each do |config|
+        config.build_settings['CLANG_ENABLE_MODULES'] = 'No'
+      end
+    end
+    
+    if target.name == "React"
+      target.remove_from_project
+    end
+  end
 end

@@ -28,6 +28,8 @@ Next, be sure to setup your [iOS](https://invertase.io/react-native-firebase/#/v
 - For iOS, copy in your `GoogleService-Info.plist` to the `ios` directory.
 - For Android, copy in your `google-services.json` to the `android/app` directory.
 
+For React Native Maps to work, you'll need to follow step 3 of [their android instructions](https://github.com/airbnb/react-native-maps/blob/master/docs/installation.md) and update the api key (`YOUR_GOOGLE_MAPS_API_KEY`) found in `android\app\src\main\AndroidManifest.xml`.
+
 # Firebase database setup
 
 This super simple example app expects you to have a root node in your database with a child of `names` which has a set of child nodes with random names for each value, like:

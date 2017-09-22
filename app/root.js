@@ -3,6 +3,7 @@ import { StyleSheet, Text, View } from 'react-native'
 import firebase from './firebase'
 import Icon from 'react-native-vector-icons/FontAwesome'
 import LinearGradient from 'react-native-linear-gradient'
+import MapView from 'react-native-maps'
 
 export default class Root extends Component {
   constructor(props) {
@@ -25,7 +26,13 @@ export default class Root extends Component {
     const { loading, names } = this.state
     return (
       <View style={styles.container}>
-        <Icon name="envira" size={64} />
+        <Icon name="envira" size={32} />
+        <MapView initialRegion={{
+          latitude: 37.78825,
+          longitude: -122.4324,
+          latitudeDelta: 0.0922,
+          longitudeDelta: 0.0421,
+        }} style={{ width: 200, height: 100 }} />
         {loading && <Text style={styles.welcome}>... loading</Text>}
         {!loading && names.map((name, i) => <Text key={i} style={styles.welcome}>{name}</Text>)}
         <LinearGradient colors={['orange', 'red']} style={{ width: 200, height: 50 }} />
