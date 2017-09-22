@@ -6,12 +6,16 @@
 
 import React, { Component } from 'react'
 import { AppRegistry } from 'react-native'
+import { Provider } from 'react-redux'
+import store from './app/redux/store'
 import Root from './app/root'
 
 export default class firebaseExmpl extends Component {
   render() {
     return (
-      <Root />
+      <Provider store={store}>
+        <Root />
+      </Provider>
     )
   }
 }
