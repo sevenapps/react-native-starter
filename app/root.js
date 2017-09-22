@@ -6,6 +6,7 @@ import MapView from 'react-native-maps'
 import { connect } from 'react-redux'
 import { subscribe } from './redux/actions/names'
 import Button from 'react-native-button'
+import { AccessToken, LoginButton } from 'react-native-fbsdk'
 
 class Root extends Component {
   componentDidMount() {
@@ -15,6 +16,22 @@ class Root extends Component {
   }
   onPress() {
     alert('ouch! stop stouching me')
+  }
+  onLoginFinished(error, result) {
+    if (error) {
+      alert("login has error: " + result.error)
+    } else if (result.isCancelled) {
+      alert("login is cancelled.")
+    } else {
+      AccessToken.getCurrentAccessToken().then(
+        (data) => {
+          alert(data.accessToken.toString())
+        }
+      )
+    }
+  }
+  onLogoutFinished() {
+    alert("logout.")
   }
   render() {
     const { isLoaded, names } = this.props
@@ -29,11 +46,15 @@ class Root extends Component {
         }} style={{ width: 200, height: 100 }} />
         {!isLoaded && <Text style={styles.welcome}>... loading</Text>}
         {isLoaded && names.map((name, i) => <Text key={i} style={styles.welcome}>{name}</Text>)}
-        <Button onPress={this.onPress.bind(this)}>
+        <Button containerStyle={{ marginBottom: 12 }} onPress={this.onPress.bind(this)}>
           <LinearGradient colors={['orange', 'red']} style={{ width: 200, height: 50, justifyContent: 'center', alignItems: 'center' }}>
             <Text style={{ color: 'white', backgroundColor: 'transparent' }}>Touch Me</Text>
           </LinearGradient>
         </Button>
+        <LoginButton
+          publishPermissions={["publish_actions"]}
+          onLoginFinished={this.onLoginFinished.bind(this)}
+          onLogoutFinished={this.onLogoutFinished.bind(this)} />
       </View>
     )
   }

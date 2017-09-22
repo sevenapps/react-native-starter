@@ -3747,6 +3747,10 @@ react-native-button@^2.1.0:
   dependencies:
     prop-types "^15.5.10"
 
+react-native-fbsdk@^0.6.1:
+  version "0.6.1"
+  resolved "https://registry.yarnpkg.com/react-native-fbsdk/-/react-native-fbsdk-0.6.1.tgz#268bdbda5a16f5341ca43e3fa1beb88801e35a92"
+
 react-native-firebase@^2.2.1:
   version "2.2.1"
   resolved "https://registry.yarnpkg.com/react-native-firebase/-/react-native-firebase-2.2.1.tgz#7f22245eba951cce4b72e4653170d59004c9b561"

@@ -30,6 +30,8 @@ Next, be sure to setup your [iOS](https://invertase.io/react-native-firebase/#/v
 
 For React Native Maps to work, you'll need to follow step 3 of [their android instructions](https://github.com/airbnb/react-native-maps/blob/master/docs/installation.md) and update the api key (`YOUR_GOOGLE_MAPS_API_KEY`) found in `android\app\src\main\AndroidManifest.xml`.
 
+For React Native FBSDK to work, you'll need to grab a Facebook App Id from a new or existing Facebook App and update it in `android/app/src/main/res/values/strings.xml` by replacing `{your-fb-app-id}`. You will also need to replace the `{your-fb-app-id}` and `{your-fb-app-name}` in `ios/firebaseExmpl/Info.plist`.
+
 # Firebase database setup
 
 This super simple example app expects you to have a root node in your database with a child of `names` which has a set of child nodes with random names for each value, like:
@@ -43,6 +45,8 @@ example-app -
     3 - ...
 ```
 
-# Troubleshooting
+# Troubleshooting Android
 
-When running builds for android, you may encounter `The SDK Build Tools revision (23.0.1) is too low for project ...`. If so, just open up Android Studio and address these issues in the Gradle Sync messages panel.
+You may encounter `The SDK Build Tools revision (23.0.1) is too low for project ...`. If so, just open up Android Studio and address these issues in the Gradle Sync messages panel.
+
+You may encounter an error with the React Native FBSDK package like `method does not override or implement a method from a supertype: @Override`. This seems to be a bug with this package. Open up the project in Android Studio, browse to `"android [react-native-fbsdk]"/src/main/java/com.facebook.reactnative.androidsdk/FBSDKPackage.java` and delete the `@Override` on line 61 (just above the `createJSModules()` method - it should have a red wavey underline).
