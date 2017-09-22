@@ -30,6 +30,8 @@ import io.invertase.firebase.storage.RNFirebaseStoragePackage; // Firebase Stora
 import com.BV.LinearGradient.LinearGradientPackage;
 import com.airbnb.android.react.maps.MapsPackage;
 
+import com.RNFetchBlob.RNFetchBlobPackage;
+
 import java.util.Arrays;
 import java.util.List;
 
@@ -64,7 +66,8 @@ public class MainApplication extends Application implements ReactApplication {
           new RNFirebaseStoragePackage(),
           new LinearGradientPackage(),
           new MapsPackage(),
-          new FBSDKPackage(mCallbackManager)
+          new FBSDKPackage(mCallbackManager),
+          new RNFetchBlobPackage()
       );
     }
   };

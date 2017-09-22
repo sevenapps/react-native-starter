@@ -41,6 +41,8 @@ target 'firebaseExmpl' do
     'Share',
   ], :path => '../node_modules/react-native-fbsdk/iOS'
 
+  pod 'react-native-fetch-blob', :path => '../node_modules/react-native-fetch-blob'
+
   target 'firebaseExmplTests' do
     inherit! :search_paths
     # Pods for testing

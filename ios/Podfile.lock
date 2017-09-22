@@ -86,6 +86,8 @@ PODS:
   - react-native-fbsdk/Share (0.6.1):
     - FBSDKShareKit
     - React
+  - react-native-fetch-blob (0.10.6):
+    - React/Core
   - react-native-maps (0.16.4):
     - React
   - React/BatchedBridge (0.48.3):
@@ -127,6 +129,7 @@ DEPENDENCIES:
   - react-native-fbsdk/Core (from `../node_modules/react-native-fbsdk/iOS`)
   - react-native-fbsdk/Login (from `../node_modules/react-native-fbsdk/iOS`)
   - react-native-fbsdk/Share (from `../node_modules/react-native-fbsdk/iOS`)
+  - react-native-fetch-blob (from `../node_modules/react-native-fetch-blob`)
   - react-native-maps (from `../node_modules/react-native-maps`)
   - React/BatchedBridge (from `../node_modules/react-native`)
   - React/Core (from `../node_modules/react-native`)
@@ -146,6 +149,8 @@ EXTERNAL SOURCES:
     :path: ../node_modules/react-native
   react-native-fbsdk:
     :path: ../node_modules/react-native-fbsdk/iOS
+  react-native-fetch-blob:
+    :path: ../node_modules/react-native-fetch-blob
   react-native-maps:
     :path: ../node_modules/react-native-maps
   RNFirebase:
@@ -176,11 +181,12 @@ SPEC CHECKSUMS:
   Protobuf: 03eef2ee0b674770735cf79d9c4d3659cf6908e8
   React: 748a63a3a08cef2864657ad752a5ca7393e07fc2
   react-native-fbsdk: 1f935b79f588e54c6b95805bf7117227b2f09322
+  react-native-fetch-blob: 2bef9be702de8726f4d7bf58d2345579aaaee60d
   react-native-maps: b04d264bcd6d042a878c07ff2b759e1e79fb3108
   RNFirebase: 69d2379c0268426b3be8d7359773196930974cef
   RNVectorIcons: 208e7e1507e3bc800619caf1c2748ad6b6b68188
   Yoga: b3337798e426de90f48662cf0fe2ee1a844075e1
 
-PODFILE CHECKSUM: 40aaa16dbb1276f3120a543ecf31f5a104966b1c
+PODFILE CHECKSUM: d351ba6a2f387bc0c8cb3f4e8a392ca011e01cb0
 
 COCOAPODS: 1.2.1
