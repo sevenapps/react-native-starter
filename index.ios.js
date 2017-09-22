@@ -8,13 +8,13 @@ import React, { Component } from 'react'
 import { AppRegistry } from 'react-native'
 import { Provider } from 'react-redux'
 import store from './app/redux/store'
-import Root from './app/root'
+import ExampleApp from './app/app'
 
 export default class firebaseExmpl extends Component {
   render() {
     return (
       <Provider store={store}>
-        <Root />
+        <ExampleApp />
       </Provider>
     )
   }
