@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { StyleSheet, Text, View } from 'react-native'
 import firebase from './firebase'
+import LinearGradient from 'react-native-linear-gradient'
 
 export default class Root extends Component {
   constructor(props) {
@@ -25,6 +26,7 @@ export default class Root extends Component {
       <View style={styles.container}>
         {loading && <Text style={styles.welcome}>... loading</Text>}
         {!loading && names.map((name, i) => <Text key={i} style={styles.welcome}>{name}</Text>)}
+        <LinearGradient colors={['orange', 'red']} style={{ width: 200, height: 50 }} />
       </View>
     )
   }

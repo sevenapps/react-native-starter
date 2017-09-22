@@ -31,6 +31,8 @@ target 'firebaseExmpl' do
   # pod 'Firebase/RemoteConfig'
   pod 'Firebase/Storage'
 
+  pod 'BVLinearGradient', :path => '../node_modules/react-native-linear-gradient'  
+
   target 'firebaseExmplTests' do
     inherit! :search_paths
     # Pods for testing

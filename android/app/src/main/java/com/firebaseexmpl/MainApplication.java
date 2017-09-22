@@ -21,6 +21,8 @@ import io.invertase.firebase.messaging.RNFirebaseMessagingPackage; // Firebase C
 // import io.invertase.firebase.perf.RNFirebasePerformancePackage; // Firebase Performance
 import io.invertase.firebase.storage.RNFirebaseStoragePackage; // Firebase Storage
 
+import com.BV.LinearGradient.LinearGradientPackage;
+
 import java.util.Arrays;
 import java.util.List;
 
@@ -46,7 +48,8 @@ public class MainApplication extends Application implements ReactApplication {
           new RNFirebaseDatabasePackage(),
           new RNFirebaseMessagingPackage(),
           // new RNFirebasePerformancePackage(),
-          new RNFirebaseStoragePackage()
+          new RNFirebaseStoragePackage(),
+          new LinearGradientPackage()
       );
     }
   };
