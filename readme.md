@@ -40,3 +40,7 @@ example-app -
     2 - john
     3 - ...
 ```
+
+# Troubleshooting
+
+When running builds for android, you may encounter `The SDK Build Tools revision (23.0.1) is too low for project ...`. If so, just open up Android Studio and address these issues in the Gradle Sync messages panel.
