@@ -2,14 +2,14 @@
 
 This is a fork of [React Native Firebase Starter](https://github.com/andersryanc/react-native-firebase-starter) which I've taken a little bit further by installing a number of other dependencies, like:
 
-- React Native Button
-- React Navigation
-- React Native Vector Icons
-- Redux, Redux-Thunk
-- React Native Facebook SDK
-- React Native Maps
-- React Native Linear Gradient
-- React Native Fetch Blob
+- [React Native Button](https://github.com/ide/react-native-button)
+- [React Native Facebook SDK](https://github.com/facebook/react-native-fbsdk)
+- [React Native Fetch Blob](https://github.com/wkh237/react-native-fetch-blob)
+- [React Native Linear Gradient](https://github.com/react-native-community/react-native-linear-gradient)
+- [React Native Maps](https://github.com/airbnb/react-native-maps)
+- [React Native Vector Icons](https://github.com/oblador/react-native-vector-icons)
+- [React Navigation](https://github.com/react-community/react-navigation)
+- [Redux](https://github.com/reactjs/redux), [Redux-Thunk](https://github.com/gaearon/redux-thunk), [React-Redux](https://github.com/reactjs/react-redux)
 
 # First Time Project Setup
 
