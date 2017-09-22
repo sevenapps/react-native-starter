@@ -1,21 +1,34 @@
-import React from 'react'
+import React, { Component } from 'react'
 import { StyleSheet, Text, View } from 'react-native'
 import firebase from './firebase'
 
-const Root = () => (
-  <View style={styles.container}>
-    <Text style={styles.welcome}>
-      Welcome to React Native!
-        </Text>
-    <Text style={styles.instructions}>
-      To get started, edit index.ios.js
-        </Text>
-    <Text style={styles.instructions}>
-      Press Cmd+R to reload,{'\n'}
-      Cmd+D or shake for dev menu
-        </Text>
-  </View>
-)
+export default class Root extends Component {
+  constructor(props) {
+    super(props)
+    this.state = { loading: true, names: [] }
+  }
+  componentDidMount() {
+    setTimeout(this._loadData.bind(this), 1e3)
+  }
+  _loadData() {
+    firebase.database().ref('/names').on('value', snapshot => {
+      const names = []
+      snapshot.forEach(childSnapshot => {
+        names.push(childSnapshot.val())
+      })
+      this.setState({ loading: false, names })
+    })
+  }
+  render() {
+    const { loading, names } = this.state
+    return (
+      <View style={styles.container}>
+        {loading && <Text style={styles.welcome}>... loading</Text>}
+        {!loading && names.map((name, i) => <Text key={i} style={styles.welcome}>{name}</Text>)}
+      </View>
+    )
+  }
+}
 
 const styles = StyleSheet.create({
   container: {
@@ -35,5 +48,3 @@ const styles = StyleSheet.create({
     marginBottom: 5,
   },
 })
-
-export default Root
