@@ -39,6 +39,8 @@
 		5E9157361DD0AC6A00FF2AA8 /* libRCTAnimation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E9157331DD0AC6500FF2AA8 /* libRCTAnimation.a */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
 		94859CBD1F74D7B000208870 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 94859CBC1F74D7B000208870 /* GoogleService-Info.plist */; };
+		948C381C1F7579B40042A2FA /* EvilIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 948C38111F7579B40042A2FA /* EvilIcons.ttf */; };
+		948C381E1F7579B40042A2FA /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 948C38131F7579B40042A2FA /* FontAwesome.ttf */; };
 		ADBDB9381DFEBF1600ED6528 /* libRCTBlob.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBDB9271DFEBF0700ED6528 /* libRCTBlob.a */; };
 		F2606FF84E5EE27D036AD6BD /* libPods-firebaseExmplTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AD75507AD08C9150E0A5F45 /* libPods-firebaseExmplTests.a */; };
 		F4923092A8D6FD7944AD29D1 /* libPods-firebaseExmpl-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DDAD672F29AFF92A372B7D2B /* libPods-firebaseExmpl-tvOSTests.a */; };
@@ -309,6 +311,8 @@
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
 		8AD75507AD08C9150E0A5F45 /* libPods-firebaseExmplTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-firebaseExmplTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		94859CBC1F74D7B000208870 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		948C38111F7579B40042A2FA /* EvilIcons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = EvilIcons.ttf; sourceTree = "<group>"; };
+		948C38131F7579B40042A2FA /* FontAwesome.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontAwesome.ttf; sourceTree = "<group>"; };
 		A81FA817CAC83E829CDC5E20 /* libPods-firebaseExmpl.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-firebaseExmpl.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADBDB91F1DFEBF0600ED6528 /* RCTBlob.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTBlob.xcodeproj; path = "../node_modules/react-native/Libraries/Blob/RCTBlob.xcodeproj"; sourceTree = "<group>"; };
 		B7CD363F9894D0B84B26B0B2 /* Pods-firebaseExmpl-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-firebaseExmpl-tvOSTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-firebaseExmpl-tvOSTests/Pods-firebaseExmpl-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -538,6 +542,7 @@
 			isa = PBXGroup;
 			children = (
 				13B07FAE1A68108700A75B9A /* firebaseExmpl */,
+				948C380F1F7579B40042A2FA /* Fonts */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* firebaseExmplTests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
@@ -558,6 +563,16 @@
 				2D02E4901E0B4A5D006451C7 /* firebaseExmpl-tvOSTests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		948C380F1F7579B40042A2FA /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				948C38111F7579B40042A2FA /* EvilIcons.ttf */,
+				948C38131F7579B40042A2FA /* FontAwesome.ttf */,
+			);
+			name = Fonts;
+			path = "../node_modules/react-native-vector-icons/Fonts";
 			sourceTree = "<group>";
 		};
 		99A3BEF18C82AA7206D987D8 /* Pods */ = {
@@ -1010,7 +1025,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				948C381E1F7579B40042A2FA /* FontAwesome.ttf in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
+				948C381C1F7579B40042A2FA /* EvilIcons.ttf in Resources */,
 				94859CBD1F74D7B000208870 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

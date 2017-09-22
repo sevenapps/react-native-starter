@@ -90,6 +90,8 @@ PODS:
     - React/RCTBlob
   - RNFirebase (2.2.1):
     - React
+  - RNVectorIcons (4.4.0):
+    - React
   - Yoga (0.48.3.React)
 
 DEPENDENCIES:
@@ -107,6 +109,7 @@ DEPENDENCIES:
   - React/RCTText (from `../node_modules/react-native`)
   - React/RCTWebSocket (from `../node_modules/react-native`)
   - RNFirebase (from `../node_modules/react-native-firebase`)
+  - RNVectorIcons (from `../node_modules/react-native-vector-icons`)
   - Yoga (from `../node_modules/react-native/ReactCommon/yoga`)
 
 EXTERNAL SOURCES:
@@ -116,6 +119,8 @@ EXTERNAL SOURCES:
     :path: ../node_modules/react-native
   RNFirebase:
     :path: ../node_modules/react-native-firebase
+  RNVectorIcons:
+    :path: ../node_modules/react-native-vector-icons
   Yoga:
     :path: ../node_modules/react-native/ReactCommon/yoga
 
@@ -136,8 +141,9 @@ SPEC CHECKSUMS:
   Protobuf: 03eef2ee0b674770735cf79d9c4d3659cf6908e8
   React: 748a63a3a08cef2864657ad752a5ca7393e07fc2
   RNFirebase: 69d2379c0268426b3be8d7359773196930974cef
+  RNVectorIcons: 208e7e1507e3bc800619caf1c2748ad6b6b68188
   Yoga: b3337798e426de90f48662cf0fe2ee1a844075e1
 
-PODFILE CHECKSUM: 4c62298ac9aff026e66ad6c9d145bbab09bcd86f
+PODFILE CHECKSUM: 49224956396f29870755c7755c4bbeffc29c13c7
 
 COCOAPODS: 1.2.1

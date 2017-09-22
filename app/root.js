@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { StyleSheet, Text, View } from 'react-native'
 import firebase from './firebase'
+import Icon from 'react-native-vector-icons/FontAwesome'
 import LinearGradient from 'react-native-linear-gradient'
 
 export default class Root extends Component {
@@ -24,6 +25,7 @@ export default class Root extends Component {
     const { loading, names } = this.state
     return (
       <View style={styles.container}>
+        <Icon name="envira" size={64} />
         {loading && <Text style={styles.welcome}>... loading</Text>}
         {!loading && names.map((name, i) => <Text key={i} style={styles.welcome}>{name}</Text>)}
         <LinearGradient colors={['orange', 'red']} style={{ width: 200, height: 50 }} />
