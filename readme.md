@@ -1,3 +1,5 @@
+![Screen Recording](./sample.gif)
+
 # React Native Firebase Starter
 
 This project was created with `react-native init`. I then converted it to using cocoapods and installed [React Native Firebase v2](https://invertase.io/react-native-firebase/#/v2/) with `yarn add react-native-firebase`.
